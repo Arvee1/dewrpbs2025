@@ -20,7 +20,7 @@ r.pause_threshold = 2
 
 CHROMA_DATA_PATH = "chroma_data/"
 EMBED_MODEL = "all-MiniLM-L6-v2"
-COLLECTION_NAME = "budget2025"
+COLLECTION_NAME = "dewrpbs2025"
 
 client = chromadb.PersistentClient(path=CHROMA_DATA_PATH)
 embedding_func = embedding_functions.SentenceTransformerEmbeddingFunction(
@@ -37,7 +37,7 @@ collection = client.get_or_create_collection(
 # if st.sidebar.button("Load OFSC Facsheets into Vector DB if loading the page for the first time.", type="primary"):
 @st.cache_resource
 def create_vector():
-      with open("budget_ai_2025-26.txt") as f:
+      with open("2025-26_DEWR_PBS.txt") as f:
           hansard = f.read()
           text_splitter = RecursiveCharacterTextSplitter(
               chunk_size=500,
