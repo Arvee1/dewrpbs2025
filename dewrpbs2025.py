@@ -58,8 +58,8 @@ def create_vector():
 create_vector()
 
 # The UI Part
-st.title("👨‍💻 Wazzup!!!! What do you want to know about the Australian Federal Budget 2025?")
-prompt = st.text_area("Please enter what you want to know from the Budget.")
+st.title("👨‍💻 Wazzup!!!! What do you want to know about the Australian Federal Budget 2025 for DEWR?")
+prompt = st.text_area("Please enter what you want to know from the DEWR PBS.")
 
 if st.button("Submit to AI", type="primary"):
      query_results = collection.query(
